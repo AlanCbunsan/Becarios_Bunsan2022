@@ -78,4 +78,4 @@ end
 
 #comandos
 #MetroCDMXChallenge.metro_lines("./lib/MetroCDMX.xml")
-#MetroCDMXChallenge.metro_graph("./lib/MEtroCDMX.xml")
+#MetroCDMXChallenge.metro_graph("./lib/MetroCDMX.xml")
