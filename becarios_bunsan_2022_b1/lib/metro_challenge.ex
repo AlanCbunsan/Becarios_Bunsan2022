@@ -1,9 +1,7 @@
 defmodule MetroCDMXChallenge do
- import SweetXml
+  import SweetXml
 
- #comandos
-#MetroCDMXChallenge.metro_lines("./lib/MetroCDMX.xml")
-#MetroCDMXChallenge.metro_graph("./lib/MEtroCDMX.xml")
+
 
     defmodule Line do
      defstruct [:name, :stations]
@@ -74,3 +72,10 @@ defmodule MetroCDMXChallenge do
         end)
     end
 end
+
+
+
+
+#comandos
+#MetroCDMXChallenge.metro_lines("./lib/MetroCDMX.xml")
+#MetroCDMXChallenge.metro_graph("./lib/MEtroCDMX.xml")
