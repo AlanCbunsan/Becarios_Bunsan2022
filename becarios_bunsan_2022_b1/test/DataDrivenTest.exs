@@ -14,7 +14,7 @@ for {a,b,c} <- data do
  test  "sum of #{@a} and #{@b} should equal #{@c}" do
     assert SUT.sum(@a,@b) == @c
      
- end     
- end
+   end     
+  end
         
 end

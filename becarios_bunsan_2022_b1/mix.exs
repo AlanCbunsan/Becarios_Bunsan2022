@@ -34,6 +34,7 @@ defmodule BecariosBunsan2022B1.MixProject do
       {:libgraph, "~> 0.13.3"},
       {:tzdata, "~> 1.1"},
       {:excoveralls, "~> 0.10", only: :test},
+      
     ]
   end
 end
