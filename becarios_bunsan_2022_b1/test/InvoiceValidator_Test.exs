@@ -1,6 +1,6 @@
 defmodule InvoiceValidatorTest do
   use ExUnit.Case, async: false
-  import InoviceValidator
+  ##import InvoiceValidator
 
   Calendar.put_time_zone_database(Tzdata.TimeZoneDatabase)
 
@@ -10,22 +10,23 @@ defmodule InvoiceValidatorTest do
 
   data =  [
 
-{"72 hrs atras",    "America/Tijuana",  ~N[2022-03-20 13:06:31],  :fail},
-{"72 hrs atras",    "America/Sinaloa",  ~N[2022-03-20 14:06:31],  :fail},
-{"72 hrs atras",    "America/Cdmx",     ~N[2022-03-20 15:06:31],  :fail},
-{"72 hrs atras",    "America/Qroo",     ~N[2022-03-20 16:06:31],  :fail},
-{"72 hrs atras",    "America/tijuana",  ~N[2022-03-20 13:06:35],  :succes},
-{"72 hrs atras",    "America/Sinaloa",  ~N[2022-03-20 14:06:35],  :succes},
-{"72 hrs atras",    "America/Cdmx",     ~N[2022-03-20 15:06:35],  :succes},
-{"72 hrs atras",    "America/Qroo",     ~N[2022-03-20 16:06:35],  :succes},
-{"5 mns adelante",  "America/Tijuana",  ~N[2022-03-23 13:11:35],  :succes},
-{"5 mns adelante",  "America/Sinaloa",  ~N[2022-03-23 14:11:35],  :succes},
-{"5 mns adelante",  "America/Cdmx",     ~N[2022-03-23 15:11:35],  :succes},
-{"5 mns adelante",  "America/Qroo",     ~N[2022-03-23 16:11:35],  :succes},
-{"5 mns adelante",  "America/Tijuana",  ~N[2022-03-23 13:11:36],  :fail},
-{"5 mns adelante",  "America/Sinaloa",  ~N[2022-03-23 14:11:36],  :fail},
-{"5 mns adelante",  "America/Cdmx",     ~N[2022-03-23 15:11:36],  :fail},
-{"5 mns adelante",  "America/Qroo",     ~N[2022-03-23 16:11:36],  :fail},
+   {"72 hrs atras",    "America/Tijuana",  ~N[2022-03-20 13:06:31],  :fail},
+   {"72 hrs atras",    "America/Sinaloa",  ~N[2022-03-20 14:06:31],  :fail},
+   {"72 hrs atras",    "America/Cdmx",     ~N[2022-03-20 15:06:31],  :fail},
+   {"72 hrs atras",    "America/Qroo",     ~N[2022-03-20 16:06:31],  :fail},
+   {"72 hrs atras",    "America/tijuana",  ~N[2022-03-20 13:06:35],  :succes},
+   {"72 hrs atras",    "America/Sinaloa",  ~N[2022-03-20 14:06:35],  :succes},
+   {"72 hrs atras",    "America/Cdmx",     ~N[2022-03-20 15:06:35],  :succes},
+   {"72 hrs atras",    "America/Qroo",     ~N[2022-03-20 16:06:35],  :succes},
+   {"5 mns adelante",  "America/Tijuana",  ~N[2022-03-23 13:11:35],  :succes},
+   {"5 mns adelante",  "America/Sinaloa",  ~N[2022-03-23 14:11:35],  :succes},
+   {"5 mns adelante",  "America/Cdmx",     ~N[2022-03-23 15:11:35],  :succes},
+   {"5 mns adelante",  "America/Qroo",     ~N[2022-03-23 16:11:35],  :succes},
+   {"5 mns adelante",  "America/Tijuana",  ~N[2022-03-23 13:11:36],  :fail},
+   {"5 mns adelante",  "America/Sinaloa",  ~N[2022-03-23 14:11:36],  :fail},
+   {"5 mns adelante",  "America/Cdmx",     ~N[2022-03-23 15:11:36],  :fail},
+   {"5 mns adelante",  "America/Qroo",     ~N[2022-03-23 16:11:36],  :fail},
+
   ]
 
 for {a, b, c, d} <- data do
